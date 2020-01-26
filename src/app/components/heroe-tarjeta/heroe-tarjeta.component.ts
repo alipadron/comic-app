@@ -9,12 +9,11 @@ import { Router } from "@angular/router";
 })
 export class HeroeTarjetaComponent implements OnInit {
   @Input() heroe: Heroe;
-  @Input() index: number;
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
   verHeroe() {
-    this.router.navigate(["/heroe", this.index]);
+    this.router.navigate(["/heroe", this.heroe.id]);
   }
 }
