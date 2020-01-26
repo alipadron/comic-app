@@ -68,12 +68,16 @@ export class HeroesService {
   getHeroes(): Heroe[] {
     return this.heroes;
   }
+
+  getHeroe(index: number): Heroe {
+    return this.heroes[index];
+  }
 }
 
 export interface Heroe {
-    nombre: string;
-    bio: string;
-    img: string;
-    aparicion: string;
-    casa: string;
-  };
+  nombre: string;
+  bio: string;
+  img: string;
+  aparicion: string;
+  casa: string;
+}
